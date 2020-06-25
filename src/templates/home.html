@@ -1,112 +1,120 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
   <title>Swiftana</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <style>
-      body {
-        font-family: monospace;
-      }
-      h1 {
-        background-color: yellow;
-        display: inline-block;
-        font-size: 3em;
-        margin: 0;
-        padding: 14px;
-      }
-      h3 {
-        color: black;
-        font-size: 20px;
-        margin-top: 3px;
-        text-align: center;
-      }
-      #chatbox {
-        margin-left: auto;
-        margin-right: auto;
-        width: 40%;
-        margin-top: 60px;
-      }
-      #userInput {
-        margin-left: auto;
-        margin-right: auto;
-        width: 40%;
-        margin-top: 60px;
-      }
-      #textInput {
-        width: 90%;
-        border: none;
-        border-bottom: 3px solid black;
-        font-family: monospace;
-        font-size: 17px;
-      }
-      .userText {
-        color: white;
-        font-family: monospace;
-        font-size: 17px;
-        text-align: right;
-        line-height: 30px;
-      }
-      .userText span {
-        background-color: #808080;
-        padding: 10px;
-        border-radius: 2px;
-      }
-      .botText {
-        color: white;
-        font-family: monospace;
-        font-size: 17px;
-        text-align: left;
-        line-height: 30px;
-      }
-      .botText span {
-        background-color: #4169e1;
-        padding: 10px;
-        border-radius: 2px;
-      }
-      #tidbit {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 300px;
-      }
-      .boxed {
-        margin-left: auto;
-        margin-right: auto;
-        width: 78%;
-        margin-top: 60px;
-        border: 1px solid green;
-      }
-      .box {
-        border: 2px solid black;
-      }
-    </style>
+  rel="shortcut icon"
+  type="image/x-icon"
+  href="https://i.ibb.co/8jD8YR9/swiftana.png"
+  />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+    body {
+      font-family: monospace;
+    }
+    h1 {
+      background-color: yellow;
+      display: inline-block;
+      font-size: 3em;
+      margin: 0;
+      padding: 14px;
+    }
+    h3 {
+      color: black;
+      font-size: 20px;
+      margin-top: 3px;
+      text-align: center;
+    }
+    #chatbox {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 500px;
+      margin-top: 10px;
+    }
+    #userInput {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 500px;
+      margin-top: 60px;
+    }
+    #textInput {
+      width: 100%;
+      border: none;
+      border-bottom: 3px solid black;
+      font-family: monospace;
+      font-size: 17px;
+    }
+    .userText {
+      color: white;
+      font-family: monospace;
+      font-size: 17px;
+      text-align: right;
+      line-height: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .userText span {
+      background-color: #808080;
+      padding: 10px;
+      border-radius: 2px;
+    }
+    .botText {
+      color: white;
+      font-family: monospace;
+      font-size: 17px;
+      text-align: left;
+      line-height: 30px;
+      margin-top: 10px;
+    }
+    .botText span {
+      background-color: #4169e1;
+      padding: 10px;
+      border-radius: 2px;
+      
+    }
+    #tidbit {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 300px;
+    }
+    .boxed {
+      margin-left: auto;
+      margin-right: auto;
+      width: 90%;
+      margin-top: 60px;
+      border: 1px solid green;
+    }
+    .box {
+      border: 2px solid black;
+    }
+  </style>
 </head>
-  <body>
-    <center>
-      <h1>
-        <img
-          src="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png"
-          alt="CANDICE"
-          style="width:40px;height:40px;"
-        />Your Personal Mental Health Assitant
-      </h1>
-    </center>
-<div class="box"></div>
+<body>
+  <center>
+    <h1>
+      <img
+      src="https://i.ibb.co/8jD8YR9/swiftana.png"
+      alt="Swiftana"
+      style="width:40px;height:40px;"
+      />Your Mental Health Assistant
+    </h1>
+  </center>
+  <div class="container">
+    <div class="box"></div>
     <div class="boxed">
       <div>
         <div id="chatbox">
           <img
-            src="https://user-images.githubusercontent.com/20112458/49326597-773b7280-f57a-11e8-853d-20ed61d18b0d.png"
-            alt="CANDICE"
-            style="width:40px;height:40px;"
+          src="https://i.ibb.co/8jD8YR9/swiftana.png"
+          alt="Swiftana"
+          style="width:40px;height:40px;"
           />
           <p class="botText">
-            <span>Hi! I'm Swiftana, your mental health assistant</span>
+            <span>Hi! I'm Swiftana, I can help you connect to Mental Health Specialist in your area. Whenever you have mental health disorrder sympton, you can always talk to me</span>
           </p>
         </div>
         <div id="userInput">
@@ -114,28 +122,29 @@
         </div>
       </div>
     </div>
-    <script>
-        function getBotResponse() {
-          var rawText = $("#textInput").val();
-          var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
-          $("#textInput").val("");
-          $("#chatbox").append(userHtml);
-          document
-            .getElementById("userInput")
-            .scrollIntoView({ block: "start", behavior: "smooth" });
-          $.get("/get", { msg: rawText }).done(function(data) {
-            var botHtml = '<p class="botText"><span>' + data + "</span></p>";
-            $("#chatbox").append(botHtml);
-            document
-              .getElementById("userInput")
-              .scrollIntoView({ block: "start", behavior: "smooth" });
-          });
-        }
-        $("#textInput").keypress(function(e) {
-          if (e.which == 13) {
-            getBotResponse();
-          }
-        });
-</script>
-  </body>
+  </div>
+  <script>
+    function getBotResponse() {
+      var rawText = $("#textInput").val();
+      var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+      $("#textInput").val("");
+      $("#chatbox").append(userHtml);
+      document
+      .getElementById("userInput")
+      .scrollIntoView({ block: "start", behavior: "smooth" });
+      $.get("/get", { msg: rawText }).done(function(data) {
+        var botHtml = '<p class="botText"><span>' + data + "</span></p>";
+        $("#chatbox").append(botHtml);
+        document
+        .getElementById("userInput")
+        .scrollIntoView({ block: "start", behavior: "smooth" });
+      });
+    }
+    $("#textInput").keypress(function(e) {
+      if (e.which == 13) {
+        getBotResponse();
+      }
+    });
+  </script>
+</body>
 </html>

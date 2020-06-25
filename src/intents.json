@@ -1,43 +1,70 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "How far", "How's everything", "hi", "hello", "hey", "helloo", "hellooo", "g morining", "gmorning", "good morning", "morning", "good day", "good afternoon", "good evening", "greetings", "greeting", "good to see you", "its good seeing you", "how are you", "how're you", "how are you doing", "how ya doin'", "how ya doin", "how is everything", "how is everything going", "how's everything going", "how is you", "how's you", "how are things", "how're things", "how is it going", "how's it going", "how's it goin'", "how's it goin", "how is life been treating you", "how's life been treating you", "how have you been", "how've you been", "what is up", "what's up", "what is cracking", "what's cracking", "what is good", "what's good", "what is happening", "what's happening", "what is new", "what's new", "what is neww", "g’day", "howdy"],
-         "responses": ["Hello!", "Good to see you", "Hi there, how can I help?"],
+         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
+         "responses": ["Hello!. I can assist you with your mental health. \\nEnter 1 to know more about mental health, \\nEnter 2 if you feel you have a mental health problem", "Good to see you. I can assist you with your mental health. \\nEnter 1 to know more about mental health, \\nEnter 2 if you feel you are having mental health problem", "Hi there, I can assist you with your mental health. \\nEnter 1 to know more about mental health, \\nEnter 2 if you feel you are having mental health problem"],
          "context_set": [""]
         },
-        {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-         "responses": ["See you!", "Talk to you later", "Goodbye!"],
-         "context_set": [""]
-        },
+
         {"tag": "options",
          "patterns": ["What help can you offer me", "I need help", "Some help", "help"],
          "responses": ["I can guide you through mental depression remedies", "Tell me what the problem is, am ready to assist"],
          "context_set": [""]
         },
+
+        {"tag": "optionOne",
+         "patterns": ["one", "1"],
+         "responses": ["Mental health is a state of well-being in which an individual realizes his or her own abilities, can cope with the normal stresses of life, can work productively and  is able to make a contribution to his or her community. On the other hand, Mental health disorders or illness refers to a wide range of mental health conditions-disorders that affect your mood, your thinking and your behaviour. Examples include depression, anxiety disorders, schizophrenia, eating disorders and addictive behaviours etc. \\nSigns and symptoms of mental illness can vary, depending on the disorder, circumstances and other factors. Mental illness symptoms can affect emotions, thoughts and behaviors. \\nExamples of signs and symptoms include: \\nFeeling sad or down \\nConfused thinking or reduced ability to concentrate \\nExcessive fears or worries, or extreme feelings of guilt \\nExtreme mood changes of highs and lows \\nWithdrawal from friends and activities \\nSignificant tiredness, low energy or problems sleeping \\nDetachment from reality (delusions), paranoia or hallucinations \\nInability to cope with daily problems or stress \\nTrouble understanding and relating to situations and to people \\nProblems with alcohol or drug use \\nMajor changes in eating habits \\nSex drive changes \\nExcessive anger, hostility or violence \\nSuicidal thinking \\nIf you feel you have any of the above symptoms, Kindly type how you feel to continue"],
+         "context_set": [""]
+        },
+
+        {"tag": "optionTwo",
+         "patterns": ["2", "two"],
+         "responses": ["Which of the following symptoms do you feel: \\nFeeling sad or down \\nConfused thinking or reduced ability to concentrate \\nExcessive fears or worries, or extreme feelings of guilt \\nExtreme mood changes of highs and lows \\nWithdrawal from friends and activities \\nSignificant tiredness, low energy or problems sleeping \\nDetachment from reality (delusions), paranoia or hallucinations \\nInability to cope with daily problems or stress \\nTrouble understanding and relating to situations and to people \\nProblems with alcohol or drug use \\nMajor changes in eating habits \\nSex drive changes \\nExcessive anger, hostility or violence \\nSuicidal thinking \\nIf you feel you have any of the above symptoms, Kindly type how you feel to continue"],
+         "context_set": [""]
+        },
+
         {"tag": "problem",
-         "patterns": ["I have lost appetite", "I have a lot of anxiety", "I am unable to sleep", "I have fatigue most days", "I easily loose concentration", "I have been thinking suicide", "I feel hopeless"],
-         "responses": ["I will give the following recommendations, if none of them feel satisfying, kindly type 'nearest hospital' and I will help you search nearest hospital to meet a real therapist:)  :\nPrescribe an antidepressant or antianxiety from the nearby pharmacy. \nExpose yourself to a dose of sunlight in the morning. \nAim for 30 minutes of physical activity 3 to 5 dats a week. This mostly is body exercise. \nIn case you've been using alcohol or drugs, aim at stopping the use. These substances increases depression."],
+         "patterns": ["I feel lonely", "I'm bored", "I have lost appetite", "I have a lot of anxiety", "I am unable to sleep", "I have fatigue most days", "I easily loose concentration", "I have been thinking suicide", "I feel hopeless"],
+         "responses": ["I will give the following recommendations, if none of them feel satisfying, kindly type 'NEAREST THERAPIST' or 'NEAREST Hospital' and I will help you search nearest hospital to meet a real therapist:)  :\\nPrescribe an antidepressant or antianxiety from the nearby pharmacy. \\nExpose yourself to a dose of sunlight in the morning. \\nAim for 30 minutes of physical activity 3 to 5 dats a week. This mostly is body exercise. \\nIn case you've been using alcohol or drugs, aim at stopping the use. These substances increases depression."],
          "context_set": [""]
         },
+
         {"tag": "hospital",
-         "patterns": ["I want to search for the nearest hospital", "Nearest hospital", "Hospital"],
-         "responses": ["Provide your county", "Searching hospital, please waite..."],
+         "patterns": ["search nearest hospital", "Nearest hospital", "Hospital", "Nearby therapist", "specialist", "Nearest therapist", "need therapist", "Therapist", "need conssultation", "consult therapist", "Health Practitioners", "Health specialist", "consultant"],
+         "responses": ["Your country", "Which state are you chatting from", "Which country are you chatting from"],
          "context_set": [""]
         },
+
+        {"tag": "country",
+        "patterns": ["nigeria", "Lagos", "Uganda", "kenya", "cameroon", "nairobi", "ghana", "South-Africa", "South Africa", "From Nigeria", "From Uganda", "From Kenya", "From Cameroon", "From South-Africa", "From Nairobi", "From Ghana", "From South Africa"],
+        "responses": [" Specialist close to you \\n1. Ayobanji Caleb (Phone Number) 082848488588 \\n(Address) 5b beside spendwise plaza \\n2. Briodev Hesbon (Phone Number) 0814584848488 \\n(Adress) 13b near luke hospital .... "],
+        "context_set": [""]
+        
+        },
+
         {"tag": "help",
          "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
-         "responses": ["We are open 7am-4pm Monday-Friday!"],
+         "responses": ["Ours of operation depends on specialist in your location, kindly type specialist or nearest hospital to get their details"],
          "context_set": [""]
         },
+
         {"tag": "noanswer",
         "patterns": [],
         "responses": ["You didn't write anything."],
         "context_set": [""]
         },
-	{"tag": "appreciation",
-        "patterns": ["Thanks so much", "I really appreciate", "Thank you", ],
-        "responses": ["You are welcom", "It is a pleasure", "It's alright"]
+
+	    {"tag": "appreciation",
+        "patterns": ["Thanks so much", "I really appreciate", "Thank you", "I'm grateful", "You are wonderful", "You made my day", "You solved my problem" ],
+        "responses": ["You are welcom", "It is a pleasure", "It's alright"],
         "context_set": [""]
+        
+        },
+
+	    {"tag": "goodbye",
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
+         "responses": ["See you later", "Talk to you later", "Goodbye!"],
+         "context_set": [""]
         }
    ]
 }

@@ -79,11 +79,14 @@ net = tflearn.fully_connected(net, 8)
 net = tflearn.fully_connected(net, len(output[0]), activation="softmax")
 net = tflearn.regression(net)
 
+
 model = tflearn.DNN(net)
 
-
-model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
-model.save("model.tflearn")
+try:
+	model.load("model.tflearn")
+except:
+    model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
+    model.save("model.tflearn")
 
 def bag_of_words(s, words):
     bag = [0 for _ in range(len(words))]
@@ -112,13 +115,14 @@ def get_bot_response():
         results_index = numpy.argmax(results)
         tag = labels[results_index]
 
-        if results[results_index] > 0.7:
+        if results[results_index] > 0.8:
             for tg in data["intents"]:
                 if tg["tag"] == tag:
                     responses = tg["responses"]
+            print("Welcome")
             return random.choice(responses)
         else:
-            return "Oh sorry! I didn't understand that. Kindly ask a different question."
+            return "Oh sorry! I didn't understand that. Kindly ask a different question or type 'Nearby therapist' to talk to real therapist close to you."
     
 
 if __name__ == "__main__":
