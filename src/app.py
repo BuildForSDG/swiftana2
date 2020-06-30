@@ -122,7 +122,7 @@ def get_bot_response():
             print("Welcome")
             return random.choice(responses)
         else:
-            return "Oh sorry! I didn't understand that. Kindly ask a different question or type 'Nearby therapist' to talk to real therapist close to you."
+            return "Oh sorry! I didn't understand that. Kindly answer the previous question properly or type 'Nearby therapist' to talk to real therapist close to you."
     
 
 if __name__ == "__main__":

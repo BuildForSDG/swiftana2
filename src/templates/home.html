@@ -4,7 +4,8 @@
   <title>Swiftana</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link
   rel="shortcut icon"
   type="image/x-icon"
@@ -12,117 +13,173 @@
   />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <style>
-    body {
-      font-family: monospace;
+    .myheader {
+      color: #ddd;
     }
-    h1 {
-      background-color: yellow;
-      display: inline-block;
-      font-size: 3em;
-      margin: 0;
-      padding: 14px;
+    .myheader, .d, .d1, .d2, .d3 {
+      background: -webkit-linear-gradient(left, darkcyan, #1b6d85); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, darkcyan, #1b6d85); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, darkcyan, #1b6d85); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, darkcyan, #1b6d85);
     }
-    h3 {
-      color: black;
-      font-size: 20px;
-      margin-top: 3px;
-      text-align: center;
+
+    .navigation a {
+      display: inline;
+      color: #8458B3;
     }
-    #chatbox {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 500px;
-      margin-top: 10px;
+    .navjumbotron {
+      border-top: 1px solid #fff;
+      background-color: #fff;
     }
-    #userInput {
+
+    .mychat {
+      background-color: #b2beb5;
+    }
+     #userInput {
       margin-left: auto;
       margin-right: auto;
       max-width: 500px;
       margin-top: 60px;
     }
     #textInput {
-      width: 100%;
-      border: none;
-      border-bottom: 3px solid black;
-      font-family: monospace;
-      font-size: 17px;
+      height: 2rem;
+      width: 90%;
+      border: 3px solid black;
     }
+
     .userText {
       color: white;
       font-family: monospace;
-      font-size: 17px;
+      font-size: 18px;
       text-align: right;
       line-height: 30px;
       padding-top: 10px;
       padding-bottom: 10px;
     }
+
     .userText span {
       background-color: #808080;
-      padding: 10px;
-      border-radius: 2px;
-    }
-    .botText {
-      color: white;
-      font-family: monospace;
-      font-size: 17px;
-      text-align: left;
-      line-height: 30px;
-      margin-top: 10px;
-    }
-    .botText span {
-      background-color: #4169e1;
-      padding: 10px;
+      padding: 3px;
       border-radius: 2px;
       
     }
+
+    .botText {
+      color: white;
+      font-family: monospace;
+      font-size: 18px;
+      text-align: left;
+      line-height: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .botText span {
+      padding: 3px;
+      border-radius: 4px;
+      line-height: 30px;
+
+    }
+
     #tidbit {
       position: absolute;
       bottom: 0;
       right: 0;
       width: 300px;
     }
-    .boxed {
-      margin-left: auto;
-      margin-right: auto;
-      width: 90%;
-      margin-top: 60px;
-      border: 1px solid green;
+
+      .d {
+      padding: 10px;
+      border-radius: 2px;
     }
-    .box {
-      border: 2px solid black;
+      .d1 {
+      padding: 10px;
+      border-radius: 2px;
+      animation: 2s fadeIn;
+      animation-fill-mode: forwards;
+      visibility: hidden;
+    }
+
+    @keyframes fadeIn {
+      99% {
+        visibility: hidden;
+      }
+      100% {
+        visibility: visible;
+      }
+    }
+      .d2 {
+  
+      padding: 10px;
+      border-radius: 2px;
+      animation: 4s fadeIn;
+      animation-fill-mode: forwards;
+      visibility: hidden;
+    }
+
+    @keyframes fadeIn {
+      99% {
+        visibility: hidden;
+      }
+      100% {
+        visibility: visible;
+      }
+    }
+      .d3 {
+      padding: 10px;
+      border-radius: 2px;
+      animation: 6s fadeIn;
+      animation-fill-mode: forwards;
+      
+      visibility: hidden;
+    }
+
+    @keyframes fadeIn {
+      99% {
+        visibility: hidden;
+      }
+      100% {
+        visibility: visible;
+      }
     }
   </style>
 </head>
 <body>
-  <center>
-    <h1>
-      <img
-      src="https://i.ibb.co/8jD8YR9/swiftana.png"
-      alt="Swiftana"
-      style="width:40px;height:40px;"
-      />Your Mental Health Assistant
-    </h1>
-  </center>
-  <div class="container">
-    <div class="box"></div>
-    <div class="boxed">
-      <div>
-        <div id="chatbox">
-          <img
-          src="https://i.ibb.co/8jD8YR9/swiftana.png"
+  <header>
+        <div class="myheader jumbotron text-center my-0">
+            <h2><img src="https://i.ibb.co/cgNcLbK/swiftana-icon-removebg-preview.png"
           alt="Swiftana"
-          style="width:40px;height:40px;"
-          />
-          <p class="botText">
-            <span>Hi! I'm Swiftana, I can help you connect to Mental Health Specialist in your area. Whenever you have mental health disorrder sympton, you can always talk to me</span>
-          </p>
+          style="width:60px;height:60px;"/>Your Mental Health Assistant</h2>
+         </div>
+    </header>
+    
+  <section class="container my-3">
+      <div class="row">
+        <h4 class="text-center mx-auto mt-2 col-12">Talk to Swiftana</h4>
+      </div>
+      <div class="row chartArea">
+        <div id="chatCard" class="col-12 card mx-auto mt-2 px-2 col-md-8 bg-light">
+          <div class="card-body mychat">
+          <div class="row">
+            <div id="chatbox" class="col-12 md-col-10 my-1">
+              <img src="https://i.ibb.co/cgNcLbK/swiftana-icon-removebg-preview.png"
+          alt="Swiftana"
+          style="width:40px;height:40px;"/>Online
+              <p class="botText">
+                <span class='d'>Hello! I'm Swiftana.</span>
+                </br>
+                <span class='d1'>I can assist with your Mental Health</span></br>
+                <span class='d2'> Enter HELLO or HI to continue</span>
+              </p>
+            </div>
+            <div id="userInput" class="mb-0 mt-3 mx-auto col-10 col-md-7">
+              <input id="textInput" class="mb-0 mx-auto col-10" type="text" name="msg" placeholder="Type Your Message" />
+            </div>
+          </div>
         </div>
-        <div id="userInput">
-          <input id="textInput" type="text" name="msg" placeholder="Type Your Message" />
         </div>
       </div>
-    </div>
-  </div>
+    </section>
   <script>
     function getBotResponse() {
       var rawText = $("#textInput").val();
